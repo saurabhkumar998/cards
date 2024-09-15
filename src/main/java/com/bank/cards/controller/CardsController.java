@@ -46,7 +46,7 @@ public class CardsController {
         this.cardsService = cardsService;
     }
 
-    //@Value("${build.version}")
+    @Value("${build.version}")
     private String buildVersion;
 
     @Autowired
@@ -229,7 +229,7 @@ public class CardsController {
     public ResponseEntity<String> getJavaVersion() {
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(environment.getProperty("JAVA_HOME"));
+                .body(environment.getProperty("java.version"));
     }
 
     @Operation(

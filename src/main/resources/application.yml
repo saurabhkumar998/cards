@@ -1,5 +1,12 @@
 server:
   port: 9000
+
+logging:
+  level:
+    com:
+      bank:
+        cards: DEBUG
+
 spring:
   application:
     name: "cards"
